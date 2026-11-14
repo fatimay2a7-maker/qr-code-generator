@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>QR Code Generator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="page">
+    <section class="intro">
+      <div class="brand-pill"><span class="brand-mark">◆</span> devChallenges.io</div>
+      <p class="eyebrow">JavaScript Developer Project</p>
+      <h1><span>QR CODE</span><br>Generator</h1>
+      <p class="tech">JS . HTML . CSS</p>
+    </section>
+
+    <section class="workspace" aria-label="QR code generator">
+      <div class="top-panel">
+        <div class="logo"><span class="qr-symbol">▦</span> QRCODE</div>
+        <form id="qr-form" class="input-row">
+          <label class="sr-only" for="qr-input">Text or URL</label>
+          <input id="qr-input" type="text" value="devchallenges.io" placeholder="Enter text or URL..." autocomplete="off" />
+          <button type="submit">QR code</button>
+        </form>
+        <p id="message" class="message" aria-live="polite"></p>
+      </div>
+
+      <div class="result-panel">
+        <div class="qr-halo"></div>
+        <div class="qr-frame"><div id="qrcode" aria-label="Generated QR code"></div></div>
+        <div class="actions">
+          <button id="download-btn" class="action-btn" type="button">Download <span>↓</span></button>
+          <button id="share-btn" class="action-btn" type="button">Share <span>↗</span></button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
